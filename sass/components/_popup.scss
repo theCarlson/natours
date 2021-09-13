@@ -22,11 +22,20 @@
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.25);
     transition: all 0.5s 0.2s;
+
+    @include respond(phone) {
+      display: inline-block;
+    }
   }
 
   &__left {
     width: 33.333333%;
     display: table-cell;
+
+    @include respond(phone) {
+      width: 100%;
+      display: inline-block;
+    }
   }
 
   &__right {
@@ -34,11 +43,21 @@
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem;
+
+    @include respond(phone) {
+      width: 100%;
+      display: block;
+    }
   }
 
   &__img {
-    display: block;
+    display: inline-block;
     width: 99%;
+
+    @include respond(phone) {
+      float: left;
+      width: 50%;
+    }
   }
 
   &__text {
@@ -56,6 +75,11 @@
     -ms-hyphens: auto;
     -webkit-hyphens: auto;
     hyphens: auto;
+
+    @include respond(phone) {
+      font-size: 1.6rem;
+      line-height: 2.5rem;
+    }
   }
 
   // Open States:
@@ -79,6 +103,11 @@
       font-size: 3rem;
       text-decoration: none;
       display: inline-block;
+
+      @include respond(phone) {
+        font-size: 8rem;
+        color: rgb(44, 32, 32);
+      }
     }
 
     :hover {
