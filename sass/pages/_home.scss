@@ -89,6 +89,15 @@
       url(../../img/nat-10.jpg);
   }
 
+  @media (max-width: 37.5em) {
+    background-image: linear-gradient(
+        to right,
+        rgba($color-white, 0.9) 0%,
+        rgba($color-white, 0.9) 100%
+      ),
+      url(../../img/nat-10-small.jpg);
+  }
+
   &__form {
     width: 50%;
     padding: 6rem;
